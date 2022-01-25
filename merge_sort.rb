@@ -1,10 +1,15 @@
 def merge_sort(arr)
+    # if the list only has 1 element just return the list
     return arr if arr.length < 2
+    # getting the index value in the middle
     y = arr.length / 2 - 1
+    # getting the left half
     left_h = arr[...y]
+    # getting the right half
     right_h = arr[y...]
     sorted = []
     while sorted.length != arr.length
+        # sorting the left half
         left_h.length.times do
             for i in left_h
                 n = left_h.index(i)
@@ -19,7 +24,7 @@ def merge_sort(arr)
                 end    
             end        
         end
-        
+        # sorting The right half
         right_h.length.times do
             for i in right_h
                 n = right_h.index(i)
@@ -34,7 +39,7 @@ def merge_sort(arr)
                 end    
             end        
         end
-            
+        # sorting and merging the left and right lists together    
         (left_h.length + right_h.length).times do
             if left_h.empty?
                 sorted << right_h.shift
